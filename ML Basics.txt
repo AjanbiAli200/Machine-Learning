@@ -1,0 +1,60 @@
+ML Basics:
+
+1. Supervised
+Lables
+Data Prepocessing
+Checking for nulls
+checking for missing values
+
+lable encoding:
+we convert those results into zeros and ones
+
+one hot encoding:
+
+
+Tokenization:
+Srings to numbers
+
+Data Ingestion
+Fetching the data from csv files or sources
+
+proper finilized data
+
+Splitting data
+
+Training Data - 80%
+Testing data - 20%
+
+
+Model Fitting
+Skykit learn its a libery where we select particular model(Model selection)
+	fitting model:
+		which is used fit the model then we find out the accuracy and mean squared values
+		
+		Fitting
+Overfitting									underfitting
+Model Memorize the training data			Model fails to capture data patterns
+performs poorly on testing data
+
+
+2. Unsupervised
+No-lables
+
+
+
+
+
+
+Algorithms:
+
+		Supervised									Unsupervised
+
+	Classification									Clustering
+1. Logistic Regression								K-Means Clustering
+2. Support vector machine
+3. XGBoost
+4. Random forest
+
+	Regression
+1. Linear Regression
+2.Gradient Descent(used for optimizing both regression and classification models)

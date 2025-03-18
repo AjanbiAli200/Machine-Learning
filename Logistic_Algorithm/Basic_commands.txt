@@ -1,0 +1,88 @@
+**************************************
+		Logistic Algorithm
+**************************************
+
+
+
+Data set
+
+In colab we convert the data set into Data frame using pandas
+import numpy as np  # array
+import pandas as pd # converting the .csv to data frame
+from sklearn.model_selection import train_test_split # used for split the data fram into training data set and testing data set
+from sklearn.linear_model import logisticRegresssion  # as we already know we need to use this algorithm 
+from sklearn.metrics import accracy_score			# As it is a classifiaction Model we use this and metrics is a kind of calculation
+
+
+
+variable.head() 									# gives the first 5 rows and what ever the columns we have in that particular data frame
+variable.tail()										# gives the last 5 rows and what ever the columns we have in that particular data frame
+
+
+variable.shape										# Number of rows and columns in the data frame
+
+
+variable.describe()									# statstical measures of the data frame ( Count, mean, std, min, 25%, 50%, 75%, max)
+
+
+variable.value_counts()								# gives the count of each indiviual  classifiactions
+if the count of the classification indiviuals is far apart then the model might may be predite only one value correct and model might face some issues while prediting less count values
+
+variable.groupby(column_number).mean()				# Gives the mean value of label of each rows
+
+X = variable.drop(columns = column_number, axis=1)
+Y = variable(column_number)							# seperating data and labels
+
+
+print(X)
+print(Y)											# Prints the values of those x and y
+
+
+
+
+*******************************************
+	Training and Test Data
+*******************************************
+
+
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.1, stratify = Y, random_state = 1)
+
+
+#		X is data, Y = label,  test_size is Size of testing data frame set i.e., if we take 0.1 to the test then it considers 0.9 for training data
+#		stratify is used as we determine to differntiate equal number of Y labels to both training and testing data, random_state is nothing but to generate the randomness split the data between training and testing
+
+
+print(X.shape, X_train.shape, X_test.shape)
+
+example: (208, 60) (187, 60) (21. 60)
+
+
+print(X_train)
+print(Y_train)
+
+
+*****************************************************
+	Model Training --> Logistic Regression()
+*****************************************************
+
+
+model.fit(X_train, Y_train)			# training the Logistic Regression model with training data
+
+
+
+*****************************************************
+				Model Evaluation
+*****************************************************
+
+X_train_prediction = model.predict(X_train)
+training_data_accuary = accuary_score(X_train_prediction, Y_train)   # accuary on test data
+
+print('', test_data_accuarcy)
+
+
+
+
+****************************************************
+			Making a Predictive System
+****************************************************
+
